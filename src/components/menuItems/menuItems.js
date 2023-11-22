@@ -2,6 +2,7 @@
 import { Box, HStack, Link, Stack, Input, Menu, MenuButton, MenuList, Button, MenuItem } from '@chakra-ui/react'
 import { ChevronUp } from 'react-feather'
 import { Hide } from '@chakra-ui/react'
+import { Link as LinkRoute } from "react-router-dom";
 
 import AvatarIcon from '../avatarIcon/avatarIcon';
 
@@ -10,7 +11,7 @@ const MenuItems = () => {
         <>
             <HStack display='flex' direction='row' mr='20px' gap={0} flex='1 1 0%' fontSize={14}>
                 <Box>
-                    <Link fontWeight='700' fontSize={16} mr='15px'>MealWings</Link>
+                    <Link fontWeight='700' fontSize={16} mr='15px'><LinkRoute to='/'>MealWings</LinkRoute></Link>
                     <Menu display='flex'>
                         <MenuButton 
                             color={"white"} 
@@ -29,17 +30,16 @@ const MenuItems = () => {
                         <MenuList bg='dark.3' borderColor='dark.1' borderWidth='2px' fontSize='16px' fontWeight='bold'>
                             <MenuItem 
                             _hover={{background: "dark.1",}}  fontWeight='500'
-                            bg='dark.3'>Все рецепты</MenuItem>
+                            bg='dark.3'><LinkRoute to='/'>Все рецепты</LinkRoute></MenuItem>
 
                             <MenuItem 
                             _hover={{background: "dark.1",}} 
                             bg='dark.3'>Случайный рецепт</MenuItem>
                         </MenuList>
-                    
-                        <Link fontWeight='bold' ml='10px' mr='5px'>Контакты</Link>
-                        <Link fontWeight='bold' ml='10px' mr='5px'>Все статьи</Link>
-                        <Link fontWeight='bold' ml='10px' mr='5px'>AI помощник</Link>
-                        <Link fontWeight='bold' ml='10px' mr='15px'>Чат</Link>
+                        <Link fontWeight='bold' ml='10px' mr='5px'><LinkRoute to='/contacts'>Контакты</LinkRoute></Link>
+                        <Link fontWeight='bold' ml='10px' mr='5px'><LinkRoute to='/articles'>Все статьи</LinkRoute></Link>
+                        <Link fontWeight='bold' ml='10px' mr='5px'><LinkRoute to='/ai'>AI помощник</LinkRoute></Link>
+                        <Link fontWeight='bold' ml='10px' mr='15px'><LinkRoute to='/chat'>Чат</LinkRoute></Link>
                     </Menu>
                 </Box>
 

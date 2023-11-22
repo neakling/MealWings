@@ -1,9 +1,21 @@
-import { Stack, Text, Select, Divider, NumberInput, NumberInputField, 
-    NumberInputStepper, NumberIncrementStepper, Slider, SliderTrack, 
-    SliderFilledTrack, Tooltip, SliderThumb, NumberDecrementStepper } from '@chakra-ui/react'
+import { 
+    Stack, 
+    Text, 
+    Divider, 
+    NumberInput, 
+    NumberInputField, 
+    NumberInputStepper, 
+    NumberIncrementStepper, 
+    Slider, 
+    SliderTrack, 
+    SliderFilledTrack, 
+    Tooltip, 
+    SliderThumb, 
+    NumberDecrementStepper } from '@chakra-ui/react'
+
+import { Select } from "chakra-react-select";
 
 import { useState } from 'react'
-
 
 const FilterBoxItems = () => {
 
